@@ -1,0 +1,26 @@
+{
+  "name": "braintree-mongo",
+  "version": "0.1.0",
+  "description": "Integrates with the Braintree API, storing data in MongoDB",
+  "main": "src/index.js",
+  "author": "Daniel Li <dan@danyll.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "./node_modules/.bin/babel src -d build",
+    "test": "yarn build && ./node_modules/.bin/mocha build/test.js"
+  },
+  "dependencies": {
+    "braintree": "^2.2.0",
+    "mongodb": "^2.2.30"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "chai": "^4.1.0",
+    "chai-as-promised": "^7.1.1",
+    "chance": "^1.0.10",
+    "mocha": "^3.4.2",
+    "sinon": "^2.3.7",
+    "sinon-chai": "^2.11.0"
+  }
+}
