@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "./node_modules/.bin/babel src -d build",
-    "test": "yarn build && ./node_modules/.bin/mocha build/test.js"
+    "test": "yarn build && ./node_modules/.bin/nyc ./node_modules/.bin/mocha build/test.js"
   },
   "dependencies": {
     "braintree": "^2.2.0",
@@ -20,6 +20,7 @@
     "chai-as-promised": "^7.1.1",
     "chance": "^1.0.10",
     "mocha": "^3.4.2",
+    "nyc": "^11.0.3",
     "sinon": "^2.3.7",
     "sinon-chai": "^2.11.0"
   }
