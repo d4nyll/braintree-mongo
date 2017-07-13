@@ -1,7 +1,5 @@
 import { MongoClient } from 'mongodb';
-import { DEFAULT_MONGO_URL } from '../../config';
-
-const url = process.env.MONGO_URL || DEFAULT_MONGO_URL;
+import { MONGO_URL } from '../../config';
 
 /**
  * Generic function that connects to the database
@@ -14,7 +12,7 @@ async function execute(func, ...params) {
   if (typeof func !== "function") { return; }
 
   // Use connect method to connect to the Server
-  const db = await MongoClient.connect(url);
+  const db = await MongoClient.connect(MONGO_URL);
   
   // Execute the function
   const valueToReturn = func(db, ...params);
@@ -27,4 +25,4 @@ async function execute(func, ...params) {
 
 }
 
-export { execute, DEFAULT_MONGO_URL };
+export { execute };
