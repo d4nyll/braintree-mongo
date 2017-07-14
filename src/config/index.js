@@ -1,5 +1,5 @@
 const namespace = 'btm';
-const MODE = 'test';
+const MODE = process.env.MODE || 'test';
 const DEFAULT_MONGO_DEV_URL = 'mongodb://localhost:27017/braintree';
 const DEFAULT_MONGO_TEST_URL = 'mongodb://localhost:27017/test';
 const MONGO_DEV_URL = process.env.MONGO_DEV_URL || DEFAULT_MONGO_DEV_URL;
