@@ -25,4 +25,4 @@ async function execute(func, ...params) {
 
 }
 
-export { execute };
+export { execute as default };

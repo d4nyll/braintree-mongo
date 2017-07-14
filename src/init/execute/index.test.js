@@ -7,7 +7,7 @@ chai.use(sinonChai);
 chai.use(chaiAsPromised);
 const chance = new Chance();
 
-import { execute } from './index';
+import execute from './index';
 
 describe('execute', function() {
   it('should silently execute when no functions and or parameters are passed in', function() {
