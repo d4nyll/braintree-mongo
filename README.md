@@ -1,6 +1,9 @@
+# braintree-mongo
+
 ## Requirements
 
 You should have already:
+
 * installed MongoDB on your machine
 * created a database (usually at `/data/`)
 * started the Mongo daemon
@@ -12,3 +15,4 @@ The package requires you to set the following environment variables:
 ## TODOs
 
 * Use [JSVerify](http://jsverify.github.io/) to generate random values for tests instead of using the [chance.js](https://github.com/chancejs/chancejs) library.
+* Convert all uses of promises in tests to async/await. The only reason we are not currently doing that is because we couldn't get the async/await to work in the before/after hooks.
