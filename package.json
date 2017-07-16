@@ -1,6 +1,6 @@
 {
   "name": "braintree-mongo",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Integrates with the Braintree API, storing data in MongoDB",
   "main": "dist/index.js",
   "author": "Daniel Li <dan@danyll.com>",
