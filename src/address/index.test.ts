@@ -1,5 +1,5 @@
-import { use as chaiUse, expect } from 'chai';
-import * as chaiAsPromised from "chai-as-promised";
+import { expect, use as chaiUse } from 'chai';
+import * as chaiAsPromised from 'chai-as-promised';
 import * as Chance from 'chance';
 chaiUse(chaiAsPromised);
 const chance = new Chance();

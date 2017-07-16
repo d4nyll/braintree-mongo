@@ -10,4 +10,4 @@ export {
   namespace,
   MODE,
   MONGO_URL,
-}
+};

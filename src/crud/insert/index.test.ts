@@ -1,6 +1,6 @@
-import { MongoClient } from 'mongodb';
 import * as chai from 'chai';
-import * as chaiAsPromised from "chai-as-promised";
+import * as chaiAsPromised from 'chai-as-promised';
+import { MongoClient } from 'mongodb';
 chai.use(chaiAsPromised);
 const expect = chai.expect;
 
@@ -12,24 +12,24 @@ const TEST_COLLECTION = 'insert-test';
 describe('insert', function() {
 
   let db, collection, promise, result;
-  const testObj = { "hello" : "world" };
+  const testObj = { hello : 'world' };
 
-  before(function () {
+  before(function() {
     return MongoClient.connect(MONGO_URL)
 
       // Get the database and collection objects
-      .then((res) => { db = res; collection = db.collection(TEST_COLLECTION)})
+      .then((res) => { db = res; collection = db.collection(TEST_COLLECTION);})
 
       // If the collection exists, drop it
       .then(() => db.listCollections({name: TEST_COLLECTION}).toArray())
       .then((matchingCollections) => matchingCollections.length > 1 ? collection.drop() : null)
 
       // Insert a document and store the result
-      .then(() => { return promise = insert(db, TEST_COLLECTION, testObj) })
-      .then((r) => { result = r })
+      .then(() => promise = insert(db, TEST_COLLECTION, testObj))
+      .then((r) => { result = r; });
   });
 
-  describe('insert', function() {    
+  describe('insert', function() {
     it('should throw an error if called without parameters', function() {
       expect(insert).to.throw();
     });
@@ -51,14 +51,14 @@ describe('insert', function() {
       expect(extractId.bind(null, {})).to.throw();
       expect(extractId.bind(null, {})).to.throw();
       expect(extractId.bind(null, {insertedId: {}})).to.throw();
-      expect(extractId.bind(null, {insertedId: { toHexString: "" }})).to.throw();
+      expect(extractId.bind(null, {insertedId: { toHexString: '' }})).to.throw();
     });
     it('should return a string', function() {
       expect(extractId(result)).to.be.a('string');
     });
   });
 
-  after(function () {
+  after(function() {
     // Cleanup and delete the collection
     collection.drop();
   });

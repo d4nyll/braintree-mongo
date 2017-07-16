@@ -1,5 +1,7 @@
 # braintree-mongo
 
+Package that provides useful functions for building e-commerce site with Braintree, using MongoDB as its database.
+
 ## Requirements
 
 You should have already:

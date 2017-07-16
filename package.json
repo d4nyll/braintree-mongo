@@ -7,6 +7,9 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn run transpile && ./node_modules/.bin/babel build -d dist",
+    "lint": "tslint -c tslint.json -e 'src/**/*.test.ts' 'src/**/*.ts'",
+    "lint-fix": "tslint -c tslint.json --fix -e 'src/**/*.test.ts' 'src/**/*.ts'",
+    "lint-fixall": "tslint -c tslint.json --fix 'src/**/*.ts'",
     "test": "yarn run transpile && ./node_modules/.bin/nyc ./node_modules/.bin/mocha --compilers ts-node/register --require source-map-support/register --full-trace --bail src/test.ts",
     "transpile": "tsc"
   },
@@ -38,6 +41,7 @@
     "sinon-chai": "^2.11.0",
     "source-map-support": "^0.4.15",
     "ts-node": "^3.2.0",
+    "tslint": "^5.5.0",
     "typescript": "^2.4.1",
     "typings": "^2.1.1"
   }

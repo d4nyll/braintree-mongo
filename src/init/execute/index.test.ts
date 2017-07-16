@@ -1,8 +1,8 @@
-import { use as chaiUse, expect } from 'chai';
+import { expect, use as chaiUse } from 'chai';
+import * as chaiAsPromised from 'chai-as-promised';
+import * as Chance from 'chance';
 import * as sinon from 'sinon';
 import * as sinonChai from 'sinon-chai';
-import * as chaiAsPromised from "chai-as-promised";
-import * as Chance from 'chance';
 chaiUse(sinonChai);
 chaiUse(chaiAsPromised);
 const chance = new Chance();
@@ -25,7 +25,7 @@ describe('execute', function() {
     stub.returns(randomString);
     return expect(execute(stub)).to.eventually.equal(randomString);
   });
-  it('should pass in the second argument onwards, as arguments to the function, after the db object', function () {
+  it('should pass in the second argument onwards, as arguments to the function, after the db object', function() {
     // With parameters
     const func = sinon.spy();
     const params = chance.n(chance.string, 5);
