@@ -1,10 +1,14 @@
 {
   "name": "braintree-mongo",
   "version": "0.0.1",
-  "description": "Integrates with the Braintree API, storing data in MongoDB",
+  "description": "NPM Package that provides an abstraction layer for integrating an e-commerce site with Braintree, using MongoDB as its database",
   "main": "dist/index.js",
   "author": "Daniel Li <dan@danyll.com>",
   "license": "MIT",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/d4nyll/braintree-mongo.git"
+  },
   "scripts": {
     "build": "yarn run transpile && ./node_modules/.bin/babel build -d dist",
     "lint": "tslint -c tslint.json -e 'src/**/*.test.ts' 'src/**/*.ts'",
