@@ -1,9 +1,9 @@
 import { MongoClient, ObjectID } from 'mongodb';
-import chai, { expect } from 'chai';
-import chaiAsPromised from "chai-as-promised";
-import chaiSubset from 'chai-subset';
-chai.use(chaiAsPromised);
-chai.use(chaiSubset);
+import { use as chaiUse, expect } from 'chai';
+import * as chaiAsPromised from "chai-as-promised";
+const chaiSubset = require('chai-subset'); // See https://stackoverflow.com/a/35310280/3966682
+chaiUse(chaiAsPromised);
+chaiUse(chaiSubset);
 
 import { MONGO_URL } from '../config';
 import { INVALID_ARGUMENT_OBJECT } from '../errors';
@@ -29,7 +29,7 @@ describe('insertPayment', function() {
   });
 
   it('should throw an error when nothing is passed into it', function() {
-    return expect(insertPayment()).to.eventually.be.rejectedWith(INVALID_ARGUMENT_OBJECT)
+    return expect(insertPayment.apply(null, undefined)).to.eventually.be.rejectedWith(INVALID_ARGUMENT_OBJECT);
   });
   it('should return a promise that resolves to a string', function() {
     return expect(promise).to.eventually.be.a('string');

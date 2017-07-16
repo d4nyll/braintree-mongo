@@ -1,10 +1,10 @@
-import chai, { expect } from 'chai';
-import sinon from 'sinon';
-import sinonChai from 'sinon-chai';
-import chaiAsPromised from "chai-as-promised";
-import Chance from 'chance';
-chai.use(sinonChai);
-chai.use(chaiAsPromised);
+import { use as chaiUse, expect } from 'chai';
+import * as sinon from 'sinon';
+import * as sinonChai from 'sinon-chai';
+import * as chaiAsPromised from "chai-as-promised";
+import * as Chance from 'chance';
+chaiUse(sinonChai);
+chaiUse(chaiAsPromised);
 const chance = new Chance();
 
 import execute from './index';

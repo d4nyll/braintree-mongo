@@ -1,7 +1,8 @@
 import { MongoClient } from 'mongodb';
-import chai, { expect } from 'chai';
-import chaiAsPromised from "chai-as-promised";
+import * as chai from 'chai';
+import * as chaiAsPromised from "chai-as-promised";
 chai.use(chaiAsPromised);
+const expect = chai.expect;
 
 import { MONGO_URL } from '../../config';
 import insert, { extractId } from './index';
