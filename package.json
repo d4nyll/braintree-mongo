@@ -10,6 +10,7 @@
     "lint": "tslint -c tslint.json -e 'src/**/*.test.ts' 'src/**/*.ts'",
     "lint-fix": "tslint -c tslint.json --fix -e 'src/**/*.test.ts' 'src/**/*.ts'",
     "lint-fixall": "tslint -c tslint.json --fix 'src/**/*.ts'",
+    "prepublish": "yarn run build && yarn licenses generate-disclaimer > DISCLAIMER.md",
     "test": "yarn run transpile && ./node_modules/.bin/nyc ./node_modules/.bin/mocha --compilers ts-node/register --require source-map-support/register --full-trace --bail src/test.ts",
     "transpile": "tsc"
   },
