@@ -3,6 +3,9 @@ import './init/env';
 describe('Initialization', function() {
   require('./init/index.test');
 });
+describe('Configuration', function() {
+  require('./config/index.test');
+});
 describe('CRUD', function() {
   require('./crud/index.test');
 });

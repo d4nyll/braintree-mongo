@@ -39,9 +39,13 @@
     "@types/bson" "*"
     "@types/node" "*"
 
-"@types/node@*", "@types/node@^8.0.13":
+"@types/node@*":
   version "8.0.13"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.13.tgz#530f0f9254209b0335bf5cc6387822594ef47093"
+
+"@types/node@^8.0.16":
+  version "8.0.16"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.16.tgz#5aa51abd72621a0ce53fb86bccd76825ee1b4ca9"
 
 "@types/sinon-chai@^2.7.28":
   version "2.7.28"
@@ -50,9 +54,13 @@
     "@types/chai" "*"
     "@types/sinon" "*"
 
-"@types/sinon@*", "@types/sinon@^2.3.2":
+"@types/sinon@*":
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-2.3.2.tgz#1e1e99e67162d78e2db17816892bf93bf5209885"
+
+"@types/sinon@^2.3.3":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-2.3.3.tgz#1f20b96f954b4997a09c1c0a20264aaba6b00147"
 
 abbrev@1:
   version "1.1.0"
@@ -2740,13 +2748,13 @@ signal-exit@^3.0.0, signal-exit@^3.0.1, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
-sinon-chai@^2.11.0:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/sinon-chai/-/sinon-chai-2.11.0.tgz#93d90f989fff67ce45767077ffe575dde1faea6d"
+sinon-chai@^2.12.0:
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/sinon-chai/-/sinon-chai-2.12.0.tgz#da71e9642ef7b893ba3cf2af806396a00aa45927"
 
-sinon@^2.3.7:
-  version "2.3.7"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-2.3.7.tgz#1451614a2eaab05bb4d876c1335cd40132ec5127"
+sinon@^2.3.8:
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-2.3.8.tgz#31de06fed8fba3a671e576dd96d0a5863796f25c"
   dependencies:
     diff "^3.1.0"
     formatio "1.2.0"
@@ -2996,9 +3004,9 @@ trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
 
-ts-node@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-3.2.0.tgz#9814f0c0141784900cf12fef1197ad4b7f4d23d1"
+ts-node@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-3.3.0.tgz#c13c6a3024e30be1180dd53038fc209289d4bf69"
   dependencies:
     arrify "^1.0.0"
     chalk "^2.0.0"
@@ -3008,7 +3016,7 @@ ts-node@^3.2.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.0"
     tsconfig "^6.0.0"
-    v8flags "^2.0.11"
+    v8flags "^3.0.0"
     yn "^2.0.0"
 
 tsconfig@^6.0.0:
@@ -3065,9 +3073,13 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript@^2.1.4, typescript@^2.4.1:
+typescript@^2.1.4:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.4.1.tgz#c3ccb16ddaa0b2314de031e7e6fee89e5ba346bc"
+
+typescript@^2.4.2:
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.4.2.tgz#f8395f85d459276067c988aa41837a8f82870844"
 
 typings-core@^2.3.3:
   version "2.3.3"
@@ -3192,9 +3204,15 @@ uuid@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
 
-v8flags@^2.0.10, v8flags@^2.0.11:
+v8flags@^2.0.10:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/v8flags/-/v8flags-2.1.1.tgz#aab1a1fa30d45f88dd321148875ac02c0b55e5b4"
+  dependencies:
+    user-home "^1.1.1"
+
+v8flags@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/v8flags/-/v8flags-3.0.0.tgz#4be9604488e0c4123645def705b1848d16b8e01f"
   dependencies:
     user-home "^1.1.1"
 
